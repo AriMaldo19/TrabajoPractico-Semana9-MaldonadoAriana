@@ -14,7 +14,11 @@ https://github.com/AriMaldo19/TrabajoPractico-Semana9-MaldonadoAriana/issues/1
 
 Título: `Automatizacion de Calidad y Blindaje`.
 
-El Pull Request todavía no existe. No se inventa esa dirección. El enlace trazable queda cerrado cuando el Pull Request cite este Issue, por ejemplo con `Closes #1`. Hasta ese momento, la evidencia de GitHub es solo el Issue.
+Pull Request abierto, desde la rama `entrega` hacia `master`:
+
+https://github.com/AriMaldo19/TrabajoPractico-Semana9-MaldonadoAriana/pull/2
+
+El texto de ese Pull Request incluye `Closes #1`, así que queda enlazado con el Issue número 1.
 
 ## 2. Logs del hook de pre-commit
 
@@ -68,4 +72,6 @@ Código integrado (`src/calidad/procesador.py`):
 
 El código de `src` y `tests` pasó el hook completo: formato, linter y 20 pruebas, con Cover de 100% en sentencias y ramas. El código inicial queda archivado en `auditoria/` como evidencia de los problemas y de la refactorización ya aplicada en `src`.
 
-La integración en GitHub sigue pendiente del Pull Request enlazado al Issue #1.
+El enlace trazable quedó publicado en el Pull Request #2, que cita el Issue #1 con `Closes #1`:
+
+https://github.com/AriMaldo19/TrabajoPractico-Semana9-MaldonadoAriana/pull/2
