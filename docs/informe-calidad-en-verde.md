@@ -69,3 +69,4 @@ Código integrado (`src/calidad/procesador.py`):
 El código de `src` y `tests` pasó el hook completo: formato, linter y 20 pruebas, con Cover de 100% en sentencias y ramas. El código inicial queda archivado en `auditoria/` como evidencia de los problemas y de la refactorización ya aplicada en `src`.
 
 La integración en GitHub sigue pendiente del Pull Request enlazado al Issue #1.
+La rama usada para el Pull Request es entrega.
