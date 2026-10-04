@@ -1,0 +1,11 @@
+requests
+  version_fijada: 2.20.0
+  ultima_en_pypi: 2.34.2
+  avisos_osv: 8
+  ids: GHSA-9hjg-9r4m-mvj7, GHSA-9wx4-h78v-vm56, GHSA-gc5v-m9x4-r6x2, GHSA-j8r2-6x86-q33q, PYSEC-2023-74, PYSEC-2026-1872, PYSEC-2026-1873, PYSEC-2026-2275
+
+urllib3
+  version_fijada: 1.25.11
+  ultima_en_pypi: 2.8.0
+  avisos_osv: 18
+  ids: GHSA-2xpw-w6gg-jr37, GHSA-34jh-p97f-mpxf, GHSA-38jv-5279-wg99, GHSA-g4mx-q9vg-27p4, GHSA-gm62-xv2j-4w53, GHSA-pq67-6m6q-mj2v, GHSA-q2q7-5pp4-w6pg, GHSA-qccp-gfcp-xxvc, GHSA-v845-jxx5-vc9f, PYSEC-2021-108, PYSEC-2023-192, PYSEC-2023-212, PYSEC-2026-141, PYSEC-2026-1994, PYSEC-2026-1995, PYSEC-2026-1996, PYSEC-2026-1998, PYSEC-2026-1999

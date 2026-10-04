@@ -1,0 +1,25 @@
+# Misma secuencia que el hook instalado en .githooks/pre-commit.
+# El hook que Git ejecuta es el script .githooks/pre-commit.
+# fail_fast corta la secuencia en el primer control que falla.
+fail_fast: true
+repos:
+  - repo: local
+    hooks:
+      - id: black
+        name: Formatter Black
+        entry: .venv/Scripts/python.exe -m black --check src tests
+        language: system
+        pass_filenames: false
+        always_run: true
+      - id: ruff
+        name: Linter Ruff
+        entry: .venv/Scripts/python.exe -m ruff check src tests
+        language: system
+        pass_filenames: false
+        always_run: true
+      - id: pytest
+        name: Pruebas unitarias
+        entry: .venv/Scripts/python.exe -m pytest --cov=calidad --cov-branch --cov-report=term-missing
+        language: system
+        pass_filenames: false
+        always_run: true

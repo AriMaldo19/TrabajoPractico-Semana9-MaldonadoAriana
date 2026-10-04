@@ -1,0 +1,5 @@
+# Dependencias del codigo inicial (auditoria/codigo_inicial).
+# Quedan fijadas en versiones viejas a proposito, para la auditoria del punto 2.
+# No instalar este archivo en el entorno que ejecuta las pruebas.
+requests==2.20.0
+urllib3==1.25.11

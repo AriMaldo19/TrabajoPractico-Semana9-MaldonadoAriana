@@ -1,0 +1,7 @@
+# Herramientas del entorno local. No forman parte del codigo de negocio.
+black==26.5.1
+ruff==0.16.9
+pytest==9.1.1
+pytest-cov==7.1.0
+radon==6.0.1
+pylint==4.0.9

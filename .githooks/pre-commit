@@ -1,0 +1,52 @@
+#!/bin/sh
+# Hook local de pre-commit.
+# Orden obligatorio: Formatter (Black), Linter (Ruff), pruebas (pytest).
+# Si un control falla, el script termina y Git cancela el commit.
+
+export NO_COLOR=1
+unset FORCE_COLOR
+unset CLICOLOR_FORCE
+
+if ! REPO_ROOT=$(git rev-parse --show-toplevel 2>/dev/null); then
+  echo "FALLO: este script tiene que ejecutarse dentro del repositorio."
+  exit 1
+fi
+
+cd "$REPO_ROOT" || exit 1
+
+if [ -x ".venv/Scripts/python.exe" ]; then
+  PY=".venv/Scripts/python.exe"
+elif [ -x ".venv/bin/python" ]; then
+  PY=".venv/bin/python"
+else
+  echo "FALLO: no se encontro el entorno virtual .venv dentro del proyecto."
+  echo "El commit fue rechazado."
+  exit 1
+fi
+
+echo "=== 1/3 Formatter (Black) ==="
+if ! "$PY" -m black --check src tests; then
+  echo "FALLO: Black encontro archivos sin el formato del proyecto."
+  echo "El commit fue rechazado. El linter y las pruebas no se ejecutan."
+  exit 1
+fi
+echo "Black: correcto."
+
+echo "=== 2/3 Linter (Ruff) ==="
+if ! "$PY" -m ruff check src tests; then
+  echo "FALLO: Ruff encontro problemas en el codigo."
+  echo "El commit fue rechazado. Las pruebas no se ejecutan."
+  exit 1
+fi
+echo "Ruff: correcto."
+
+echo "=== 3/3 Pruebas unitarias (pytest) ==="
+if ! "$PY" -m pytest --cov=calidad --cov-branch --cov-report=term-missing; then
+  echo "FALLO: la suite de pruebas no quedo en verde."
+  echo "El commit fue rechazado."
+  exit 1
+fi
+echo "Pytest: correcto."
+
+echo "=== Todos los controles pasaron. El commit puede continuar. ==="
+exit 0

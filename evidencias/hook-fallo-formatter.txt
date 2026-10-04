@@ -1,0 +1,7 @@
+=== 1/3 Formatter (Black) ===
+would reformat C:\Users\usuario\Desktop\Cuarto Cuatrimestre\Metodologia2\TrabajoPractico-Semana9-MaldonadoAriana\src\calidad\_mal_formato.py
+
+Oh no! 💥 💔 💥
+1 file would be reformatted, 3 files would be left unchanged.
+FALLO: Black encontro archivos sin el formato del proyecto.
+El commit fue rechazado. El linter y las pruebas no se ejecutan.

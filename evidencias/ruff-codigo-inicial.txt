@@ -1,0 +1,10 @@
+C901 `procesar_transferencia_legacy` is too complex (18 > 10)
+  --> auditoria\codigo_inicial\procesador_legacy.py:26:5
+   |
+26 | def procesar_transferencia_legacy(
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+27 |     saldo,
+28 |     monto,
+   |
+
+Found 1 error.

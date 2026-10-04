@@ -1,0 +1,9 @@
+auditoria\codigo_inicial\procesador_legacy.py
+    F 26:0 procesar_transferencia_legacy - D (22)
+    F 13:0 registrar_aprobacion - A (1)
+    F 74:0 cotizacion_usd - A (1)
+auditoria\codigo_inicial\registro_rechazo.py
+    F 4:0 registrar_rechazo - A (1)
+
+4 blocks (classes, functions, methods) analyzed.
+Average complexity: B (6.25)

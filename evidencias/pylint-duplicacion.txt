@@ -1,0 +1,18 @@
+************* Module registro_rechazo
+auditoria\codigo_inicial\registro_rechazo.py:1:0: R0801: Similar lines in 2 files
+==procesador_legacy:[13:36]
+==registro_rechazo:[4:14]
+    linea_1 = "TRANSFERENCIA"
+    linea_2 = "estado=rechazada"
+    linea_3 = "motivo=" + str(motivo)
+    linea_4 = "cuenta=" + str(cuenta)
+    linea_5 = "monto=" + str(monto)
+    linea_6 = "canal=web"
+    linea_7 = "origen=procesador_legacy"
+    return " | ".join(
+        [linea_1, linea_2, linea_3, linea_4, linea_5, linea_6, linea_7]
+    ) (duplicate-code)
+
+------------------------------------------------------------------
+Your code has been rated at 9.83/10 (previous run: 9.83/10, +0.00)
+
